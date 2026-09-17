@@ -21,6 +21,8 @@ const args = [
   '--disk-cache-size=1',
   '--virtual-time-budget=3000',
   '--run-all-compositor-stages-before-draw',
+  '--hide-scrollbars',
+  '--force-device-scale-factor=1',
   `--screenshot=${outPath}`,
   `--window-size=${width},${height}`,
   `http://localhost:8006/?t=${Date.now()}`

@@ -9,7 +9,7 @@
   <!-- Creative Editorial Typography: Syne, Instrument Serif, Clash Display, Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Instrument+Serif:ital@0;1&family=Outfit:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700,800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
@@ -38,7 +38,8 @@
           Partner With Us
         </a>
         <button class="btn btn-red btn-header-cta" data-open-modal="bandModal">
-          <span>REGISTER YOUR BAND</span>
+          <span class="cta-text-desktop">REGISTER YOUR BAND</span>
+          <span class="cta-text-mobile">REGISTER</span>
           <svg class="btn-icon" width="13" height="13" viewBox="0 0 16 16" fill="none">
             <path d="M3.33334 12.6667L12.6667 3.33334M12.6667 3.33334H5.33334M12.6667 3.33334V10.6667" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -50,7 +51,7 @@
   <main>
     <!-- ==========================================================================
          HERO SECTION: WHERE YOUNG BANDS BECOME LEGENDS
-         Colossal artistic editorial typography over live arena performance
+         Spacious, unconstrained editorial typography over live arena performance
          ========================================================================== -->
     <section class="hero-section hero-bg-video-section">
       <div class="hero-bg-video-wrapper">
@@ -61,16 +62,16 @@
         <div class="hero-bg-overlay"></div>
       </div>
 
-      <div class="container hero-split-container reveal">
-        <!-- Left: Magnetic Editorial Typography & Strategic CTAs -->
-        <div class="hero-left-wrapper">
+      <div class="container hero-content-container reveal">
+        <!-- Spacious Magnetic Editorial Typography & CTAs -->
+        <div class="hero-content-wrapper">
           <div class="tag-label hero-tag-light">
             <span class="live-dot pulse-beacon"></span>
             <span>HYDERABAD LIVE ROCK CHAMPIONSHIP • SEASON 2026</span>
           </div>
 
           <h1 class="hero-title hero-title-artistic">
-            WHERE YOUNG BANDS<br>
+            WHERE YOUNG<br class="hero-title-break-mobile"> BANDS<br>
             BECOME <span class="art-serif-word text-red">LEGENDS.</span>
           </h1>
 
@@ -100,76 +101,6 @@
               <polyline points="20 6 9 17 4 12"/>
             </svg>
             <span>100% Free Band Entry • Uncompromised Arena Sound • Pro Musician Review</span>
-          </div>
-        </div>
-
-        <!-- Right: 3D Holographic Arena VIP Stage Pass & Tournament Showcase -->
-        <div class="hero-pass-dock" id="heroPassDock">
-          <div class="arena-vip-pass" id="arenaVipPass">
-            <div class="pass-hologram-shimmer"></div>
-            
-            <div class="pass-header">
-              <div class="pass-broadcast-pill">
-                <span class="live-dot pulse-beacon"></span>
-                <span>OFFICIAL STAGE PASS // HYD</span>
-              </div>
-              <span class="pass-id-stamp">PASS № HYD-2026-ARENA</span>
-            </div>
-
-            <div class="pass-tournament-display">
-              <div class="pass-venue-badge-row">
-                <span class="pass-venue-badge">
-                  <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-                  DECCAN ROCK ARENA
-                </span>
-                <span class="pass-status-pill">● REGISTRATIONS OPEN</span>
-              </div>
-
-              <h4 class="pass-tournament-headline">THE 5,000-SEAT ARENA FINALE</h4>
-
-              <div class="pass-pillars-row">
-                <div class="pass-pillar-item">
-                  <span class="pass-pillar-num">32</span>
-                  <span class="pass-pillar-lbl">HEATS BANDS</span>
-                </div>
-                <div class="pass-pillar-item">
-                  <span class="pass-pillar-num highlight">04</span>
-                  <span class="pass-pillar-lbl">LIVE STAGES</span>
-                </div>
-                <div class="pass-pillar-item">
-                  <span class="pass-pillar-num">01</span>
-                  <span class="pass-pillar-lbl">CHAMPION EP</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="pass-credentials-grid">
-              <div class="cred-item">
-                <span class="cred-label">ADMISSION</span>
-                <strong class="cred-value">ALL-ACCESS VIP</strong>
-              </div>
-              <div class="cred-item">
-                <span class="cred-label">TOURNAMENT</span>
-                <strong class="cred-value">SEASON 01 HYD</strong>
-              </div>
-              <div class="cred-item">
-                <span class="cred-label">VENUE CAPACITY</span>
-                <strong class="cred-value">5,000 FANS</strong>
-              </div>
-            </div>
-
-            <div class="pass-footer">
-              <div class="pass-barcode-wrap">
-                <div class="pass-barcode"></div>
-                <span class="barcode-num">HYD-7829-2026-LIVE</span>
-              </div>
-              <button class="pass-action-btn" data-open-modal="fanModal">
-                <span>CLAIM PASS</span>
-                <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
-                  <path d="M3.33334 12.6667L12.6667 3.33334M12.6667 3.33334H5.33334M12.6667 3.33334V10.6667" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
       </div>

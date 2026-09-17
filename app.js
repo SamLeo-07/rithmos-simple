@@ -6,7 +6,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderAndScrollProgress();
   initScrollReveal();
-  initHeroPassTilt();
   initModals();
   initSmoothScroll();
 });
@@ -186,40 +185,4 @@ function initSmoothScroll() {
   });
 }
 
-/* ==========================================================================
-   6. 3D HOLOGRAPHIC VIP PASS PERSPECTIVE TILT
-   ========================================================================== */
-function initHeroPassTilt() {
-  const card = document.getElementById('arenaVipPass');
-  const dock = document.getElementById('heroPassDock');
-  if (!card || !dock) return;
 
-  dock.addEventListener('mousemove', (e) => {
-    const rect = dock.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    
-    // Max tilt +- 10deg
-    const rotateX = ((y - centerY) / centerY) * -9;
-    const rotateY = ((x - centerX) / centerX) * 11;
-    
-    card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
-    
-    const shimmer = card.querySelector('.pass-hologram-shimmer');
-    if (shimmer) {
-      const px = ((x / rect.width) * 100).toFixed(1);
-      const py = ((y / rect.height) * 100).toFixed(1);
-      shimmer.style.background = `radial-gradient(circle at ${px}% ${py}%, rgba(255,255,255,0.22) 0%, rgba(226,33,40,0.14) 40%, transparent 75%)`;
-    }
-  });
-
-  dock.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-    const shimmer = card.querySelector('.pass-hologram-shimmer');
-    if (shimmer) {
-      shimmer.style.background = 'transparent';
-    }
-  });
-}
