@@ -1,0 +1,21 @@
+{
+  "name": "rithmos-landing",
+  "version": "1.0.0",
+  "description": "RITHMOS — Live Band Competition Landing Page",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "keywords": [
+    "music",
+    "rock",
+    "bands",
+    "hyderabad",
+    "live-music",
+    "competition"
+  ],
+  "author": "RITHMOS Team",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0"
+  }
+}

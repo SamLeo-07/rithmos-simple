@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RITHMOS — Where Bands Rise | Live Band Platform</title>
+  <meta name="description" content="A live competitive music platform born in Hyderabad. Discovering, celebrating, and elevating young bands through unfiltered live sound.">
+
+  <!-- Creative Editorial Typography: Syne, Instrument Serif, Clash Display, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ==========================================================================
+       MINIMAL MASTER HEADER
+       Official Logo + Immediate Action. Zero cluttered text links.
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo-link" aria-label="RITHMOS Home">
+        <img src="rithmos-logo.png" alt="RITHMOS — Where Bands Rise" class="brand-logo-img">
+      </a>
+
+      <div class="nav-actions">
+        <a href="#" class="nav-ghost-link" data-open-modal="brandModal">
+          <svg class="nav-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          Partner With Us
+        </a>
+        <button class="btn btn-red btn-header-cta" data-open-modal="bandModal">
+          <span>REGISTER YOUR BAND</span>
+          <svg class="btn-icon" width="13" height="13" viewBox="0 0 16 16" fill="none">
+            <path d="M3.33334 12.6667L12.6667 3.33334M12.6667 3.33334H5.33334M12.6667 3.33334V10.6667" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: WHERE YOUNG BANDS BECOME LEGENDS
+         Colossal artistic editorial typography over live arena performance
+         ========================================================================== -->
+    <section class="hero-section hero-bg-video-section">
+      <div class="hero-bg-video-wrapper">
+        <video id="heroVideo" class="hero-bg-video-player" autoplay loop muted playsinline preload="auto">
+          <source src="hero-clip.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <div class="container hero-split-container reveal">
+        <!-- Left: Magnetic Editorial Typography & Strategic CTAs -->
+        <div class="hero-left-wrapper">
+          <div class="tag-label hero-tag-light">
+            <span class="live-dot pulse-beacon"></span>
+            <span>HYDERABAD LIVE ROCK CHAMPIONSHIP • SEASON 2026</span>
+          </div>
+
+          <h1 class="hero-title hero-title-artistic">
+            WHERE YOUNG BANDS<br>
+            BECOME <span class="art-serif-word text-red">LEGENDS.</span>
+          </h1>
+
+          <p class="hero-desc hero-desc-light">
+            India’s premier live stage for original rock bands. 32 independent acts, 4 high-voltage tournament heats, and one 5,000-seat Hyderabad arena finale. Zero backing tracks — just pure, unfiltered kinetic stage power.
+          </p>
+
+          <div class="hero-cta-group hero-cta-left">
+            <button class="btn btn-red btn-hero-primary" data-open-modal="bandModal">
+              <span>REGISTER YOUR BAND</span>
+              <svg class="btn-icon" width="13" height="13" viewBox="0 0 16 16" fill="none">
+                <path d="M3.33334 12.6667L12.6667 3.33334M12.6667 3.33334H5.33334M12.6667 3.33334V10.6667" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            
+            <button class="btn btn-outline-white btn-hero-secondary" data-open-modal="fanModal">
+              <svg class="btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/>
+                <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+              </svg>
+              <span>CLAIM AUDIENCE PASS</span>
+            </button>
+          </div>
+
+          <div class="hero-subtext-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            <span>100% Free Band Entry • Uncompromised Arena Sound • Pro Musician Review</span>
+          </div>
+        </div>
+
+        <!-- Right: 3D Holographic Arena VIP Stage Pass & Tournament Showcase -->
+        <div class="hero-pass-dock" id="heroPassDock">
+          <div class="arena-vip-pass" id="arenaVipPass">
+            <div class="pass-hologram-shimmer"></div>
+            
+            <div class="pass-header">
+              <div class="pass-broadcast-pill">
+                <span class="live-dot pulse-beacon"></span>
+                <span>OFFICIAL STAGE PASS // HYD</span>
+              </div>
+              <span class="pass-id-stamp">PASS № HYD-2026-ARENA</span>
+            </div>
+
+            <div class="pass-tournament-display">
+              <div class="pass-venue-badge-row">
+                <span class="pass-venue-badge">
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                  DECCAN ROCK ARENA
+                </span>
+                <span class="pass-status-pill">● REGISTRATIONS OPEN</span>
+              </div>
+
+              <h4 class="pass-tournament-headline">THE 5,000-SEAT ARENA FINALE</h4>
+
+              <div class="pass-pillars-row">
+                <div class="pass-pillar-item">
+                  <span class="pass-pillar-num">32</span>
+                  <span class="pass-pillar-lbl">HEATS BANDS</span>
+                </div>
+                <div class="pass-pillar-item">
+                  <span class="pass-pillar-num highlight">04</span>
+                  <span class="pass-pillar-lbl">LIVE STAGES</span>
+                </div>
+                <div class="pass-pillar-item">
+                  <span class="pass-pillar-num">01</span>
+                  <span class="pass-pillar-lbl">CHAMPION EP</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pass-credentials-grid">
+              <div class="cred-item">
+                <span class="cred-label">ADMISSION</span>
+                <strong class="cred-value">ALL-ACCESS VIP</strong>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">TOURNAMENT</span>
+                <strong class="cred-value">SEASON 01 HYD</strong>
+              </div>
+              <div class="cred-item">
+                <span class="cred-label">VENUE CAPACITY</span>
+                <strong class="cred-value">5,000 FANS</strong>
+              </div>
+            </div>
+
+            <div class="pass-footer">
+              <div class="pass-barcode-wrap">
+                <div class="pass-barcode"></div>
+                <span class="barcode-num">HYD-7829-2026-LIVE</span>
+              </div>
+              <button class="pass-action-btn" data-open-modal="fanModal">
+                <span>CLAIM PASS</span>
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
+                  <path d="M3.33334 12.6667L12.6667 3.33334M12.6667 3.33334H5.33334M12.6667 3.33334V10.6667" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High-Energy Kinetic Editorial Marquee Ticker -->
+    <div class="editorial-marquee-wrap" aria-hidden="true">
+      <div class="editorial-marquee-track">
+        <span class="marquee-unit">⚡ 100% UNFILTERED LIVE ROCK</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">ZERO PLAYBACK STEMS</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">32 HYDERABAD BANDS</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">4 TOURNAMENT HEATS</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">5,000 CAPACITY ARENA FINALE</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">DECCAN ROCK HERITAGE</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">FREE BAND REGISTRATION</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">⚡ 100% UNFILTERED LIVE ROCK</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">ZERO PLAYBACK STEMS</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">32 HYDERABAD BANDS</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">4 TOURNAMENT HEATS</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">5,000 CAPACITY ARENA FINALE</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">DECCAN ROCK HERITAGE</span>
+        <span class="marquee-sep">•</span>
+        <span class="marquee-unit">FREE BAND REGISTRATION</span>
+        <span class="marquee-sep">•</span>
+      </div>
+    </div>
+
+    <!-- Platform Stats Telemetry (Clean White Background) -->
+    <section class="hero-telemetry-bar">
+      <div class="container">
+        <div class="telemetry-dock-grid reveal">
+          <div class="telemetry-card">
+            <div class="telemetry-icon-well">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <div class="telemetry-content">
+              <div class="stat-val">100%</div>
+              <div class="stat-name">Raw Stage Energy</div>
+              <p class="stat-detail">Pure live musicianship • Real adrenaline in the room</p>
+            </div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-icon-well">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20h20"></path><path d="M5 20V9l7-5 7 5v11"></path><path d="M9 20v-6a3 3 0 0 1 6 0v6"></path>
+              </svg>
+            </div>
+            <div class="telemetry-content">
+              <div class="stat-val">04</div>
+              <div class="stat-name">Tournament Stages</div>
+              <p class="stat-detail">Garage auditions to the Hyderabad finale</p>
+            </div>
+          </div>
+
+          <div class="telemetry-card">
+            <div class="telemetry-icon-well">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+              </svg>
+            </div>
+            <div class="telemetry-content">
+              <div class="stat-val">01</div>
+              <div class="stat-name">RITHMOS Champion</div>
+              <p class="stat-detail">Studio EP masters & national headline tour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 01: THE JAM ROOM ROOTS
+         Layout: Text Left, Interactive Visual Right
+         ========================================================================== -->
+    <section class="story-chapter-section bg-white" id="roots">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Text Left -->
+          <div class="story-text-col reveal">
+            <div class="chapter-pill">
+              <span class="chapter-num">CHAPTER 01</span>
+              <span class="chapter-dot"></span>
+              <span>THE RAW BEGINNING</span>
+            </div>
+            <h2 class="story-title">EVERY ANTHEM BEGINS IN A <span class="art-serif-word text-red">SWEATBOX.</span></h2>
+            <p class="story-lead-italic">
+              “Cheap acoustic foam, blown amplifier fuses, and the electric spark of a riff written at 2 AM.”
+            </p>
+            <p class="story-body-text">
+              Long before the roar of festival arenas, Indian rock music is forged in cramped basements, college hostel rooms, and rented jam pads across Hyderabad and beyond. Four or five musicians locking tight, arguing over bridges, sweating without air conditioning, driven by the hunger to create something honest.
+            </p>
+            <p class="story-body-text">
+              Mainstream platforms stopped caring about this grit. RITHMOS was founded on a singular premise: the sweat in these rehearsal rooms deserves an uncompromised national stage.
+            </p>
+            <div class="story-action-row">
+              <a href="#" class="btn btn-red" data-open-modal="bandModal">
+                <span>SUBMIT YOUR DEMO</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <span class="story-note">Zero entry fee • Direct pro musician review</span>
+            </div>
+          </div>
+
+          <!-- Artistic Editorial Poster Card Right -->
+          <div class="story-visual-col reveal">
+            <div class="editorial-poster-card">
+              <div class="poster-watermark">01</div>
+              <div class="poster-inner">
+                <div class="poster-header">
+                  <span class="poster-tag">THE REHEARSAL FORGE</span>
+                  <span class="poster-year">EST. 2026 // HYD</span>
+                </div>
+
+                <div class="poster-content">
+                  <span class="poster-eyebrow">WHERE BANDS ARE FORGED</span>
+                  <h3 class="poster-headline">
+                    BEFORE THE LIGHTS, ONLY THE <span class="art-serif-word text-red">SONGS</span> REMAIN.
+                  </h3>
+                  <p class="poster-quote">
+                    “Four musicians in a rented room, chasing the groove that shakes the floor. No filters, no shortcuts — just unfiltered conviction.”
+                  </p>
+                </div>
+
+                <div class="poster-pillars-grid">
+                  <div class="poster-pillar-item">
+                    <span class="pillar-num">01</span>
+                    <div class="pillar-desc">
+                      <strong>Original Identity</strong>
+                      <span>Songwriting that stems from genuine hunger and regional voice.</span>
+                    </div>
+                  </div>
+                  <div class="poster-pillar-item">
+                    <span class="pillar-num">02</span>
+                    <div class="pillar-desc">
+                      <strong>The Human Pocket</strong>
+                      <span>The organic locked rhythm of a live rhythm section in sync.</span>
+                    </div>
+                  </div>
+                  <div class="poster-pillar-item">
+                    <span class="pillar-num">03</span>
+                    <div class="pillar-desc">
+                      <strong>Stage Audacity</strong>
+                      <span>The courage to step onto an arena stage without pre-recorded safety nets.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="poster-footer">
+                  <span class="poster-stamp">DECCAN INDIE ROCK MOVEMENT</span>
+                  <span class="poster-location">HYDERABAD TO PAN-INDIA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 02: THE SOUND REBELLION
+         Layout: Interactive Visual Left, Text Right (REVERSE)
+         ========================================================================== -->
+    <section class="story-chapter-section bg-subtle" id="purity">
+      <div class="container">
+        <div class="story-grid story-reverse">
+          <!-- Text Right -->
+          <div class="story-text-col reveal">
+            <div class="chapter-pill">
+              <span class="chapter-num">CHAPTER 02</span>
+              <span class="chapter-dot"></span>
+              <span>THE SOUND REBELLION</span>
+            </div>
+            <h2 class="story-title">DRAWING THE LINE IN THE <span class="art-serif-word text-red">SAND.</span></h2>
+            <blockquote class="story-blockquote">
+              “No backing tracks. No lip-syncing. Just real instruments moving real air.”
+            </blockquote>
+            <p class="story-body-text">
+              Over the last decade, commercial live music has been diluted. Solo pop artists miming to stems, heavily pitch-corrected vocals, and sterile computer tracks masquerading as "concerts."
+            </p>
+            <p class="story-body-text">
+              RITHMOS is a total return to visceral kinetic power. When a snare hits, the arena shudders. When a tube amplifier screams into feedback, you feel the harmonic overtone in your chest. This is sound purity — raw, unvarnished, and unmistakably human.
+            </p>
+
+            <div class="pillars-mini-list">
+              <div class="mini-pillar">
+                <div class="pillar-bullet-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Kinetic Room Presence:</strong> The visceral thrill of an uncompressed stage connecting with 3,000 screaming people.
+                </div>
+              </div>
+              <div class="mini-pillar">
+                <div class="pillar-bullet-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Unvarnished Human Voice:</strong> Raw emotional vulnerability over sterile digital pitch correction.
+                </div>
+              </div>
+              <div class="mini-pillar">
+                <div class="pillar-bullet-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Instinctive Rhythm Pocket:</strong> Unscripted musical communication and dynamic tempo breathing.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artistic Editorial Manifesto Card Left -->
+          <div class="story-visual-col reveal">
+            <div class="editorial-poster-card manifesto-card">
+              <div class="poster-watermark">02</div>
+              <div class="poster-inner">
+                <div class="poster-header">
+                  <span class="poster-tag">THE LIVE MANIFESTO</span>
+                  <span class="poster-year">STAGE STANDARD</span>
+                </div>
+
+                <div class="poster-content">
+                  <span class="poster-eyebrow">A CULTURAL RETURN</span>
+                  <h3 class="poster-headline">
+                    GENUINE KINETIC <span class="art-serif-word text-red">POWER.</span>
+                  </h3>
+                  <p class="poster-quote">
+                    “When thousands of people breathe the same air and a chord catches lightning, that cannot be pre-recorded or faked. That is the soul of live rock.”
+                  </p>
+                </div>
+
+                <div class="manifesto-contrast-box">
+                  <div class="contrast-row">
+                    <div class="contrast-badge badge-live">THE RITHMOS STAGE</div>
+                    <p class="contrast-text">100% human musicianship, unfiltered vocal dynamics, and spontaneous stage chemistry that moves real air.</p>
+                  </div>
+                  <div class="contrast-divider"></div>
+                  <div class="contrast-row">
+                    <div class="contrast-badge badge-rejected">THE REJECTION</div>
+                    <p class="contrast-text">No sterile playback stems, no lip-syncing crutches, and no robotic pitch correction flattening emotion.</p>
+                  </div>
+                </div>
+
+                <div class="poster-footer">
+                  <span class="poster-stamp">OFFICIAL COMPETITION CHARTER</span>
+                  <span class="poster-location">AUTHENTIC LIVE STAGES ONLY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 03: BUILT FOR THREE WORLDS (THE ECOSYSTEM)
+         Layout: 3-Act Alternating Showcase
+         ========================================================================== -->
+    <section class="story-chapter-section bg-white" id="audiences">
+      <div class="container">
+        <div class="section-lead-center reveal">
+          <div class="chapter-pill" style="margin-bottom: 0.75rem;">
+            <span class="chapter-num">CHAPTER 03</span>
+            <span class="chapter-dot"></span>
+            <span>THE LIVE ECOSYSTEM</span>
+          </div>
+          <h2>BUILT FOR THREE <span class="art-serif-word">WORLDS.</span></h2>
+          <p>
+            RITHMOS is not just a concert tournament. It is an unvarnished community connecting hungry musicians, passionate fans, and Hyderabad's proud regional rock heritage.
+          </p>
+        </div>
+
+        <!-- Act 1: For Young Bands (Left Text / Right Card) -->
+        <div class="ecosystem-act-row reveal">
+          <div class="ecosystem-text">
+            <div class="act-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 5-3-3L8.5 9.5a5.5 5.5 0 0 0-1.5 5l-4 4 3 3 4-4a5.5 5.5 0 0 0 5-1.5L22 9l-3-4Z"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>
+              <span>01 / ARTISTS & MUSICIANS</span>
+            </div>
+            <h3>FOR THE YOUNG <span class="art-serif-word text-red">BANDS</span></h3>
+            <p>
+              You've spent months writing original material in garages and rehearsal pads. You're tired of playing to empty rooms or paying venue owners for stage time. RITHMOS is your proving ground.
+            </p>
+            <p>
+              Submissions are 100% free. No gatekeepers, no algorithm bias. Every demo is evaluated directly by touring musicians for musicality, chemistry, and songwriting authenticity.
+            </p>
+            <button class="btn btn-red" data-open-modal="bandModal">
+              <span>REGISTER YOUR BAND</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </button>
+          </div>
+          <div class="ecosystem-card-col">
+            <div class="editorial-card ecosystem-card">
+              <div class="eco-icon-well">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 5-3-3L8.5 9.5a5.5 5.5 0 0 0-1.5 5l-4 4 3 3 4-4a5.5 5.5 0 0 0 5-1.5L22 9l-3-4Z"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>
+              </div>
+              <h4>WHAT BANDS RECEIVE</h4>
+              <ul class="eco-benefits-list">
+                <li><span class="check-dot"></span> Arena-grade sound reinforcement & monitor engineers</li>
+                <li><span class="check-dot"></span> Multi-track live concert recording of your performance</li>
+                <li><span class="check-dot"></span> Transparent critique from established touring rock artists</li>
+                <li><span class="check-dot"></span> Direct shot at a national tour contract & master studio EP</li>
+              </ul>
+              <div class="eco-card-footer-tag">THE ARTIST PROVING GROUND</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Act 2: For Live Music Fans (Right Text / Left Card - REVERSE) -->
+        <div class="ecosystem-act-row eco-reverse reveal">
+          <div class="ecosystem-text">
+            <div class="act-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>02 / CONCERT AUDIENCES</span>
+            </div>
+            <h3>FOR THE LIVE MUSIC <span class="art-serif-word text-red">ADDICTS</span></h3>
+            <p>
+              Nothing compares to the collective surge of adrenaline when an unamplified kick drum hits your diaphragm and a guitar solo catches lightning in front of 3,000 screaming people.
+            </p>
+            <p>
+              Be in the room when India's next legendary rock acts are born. Experience uncompressed volume, genuine stage presence, and the raw joy of real musicianship.
+            </p>
+            <button class="btn btn-outline" data-open-modal="fanModal">
+              <span>GET AUDIENCE PASSES</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="12" x="2" y="6" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+            </button>
+          </div>
+          <div class="ecosystem-card-col">
+            <div class="editorial-card ecosystem-card">
+              <div class="eco-icon-well">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h4>WHAT AUDIENCES EXPERIENCE</h4>
+              <ul class="eco-benefits-list">
+                <li><span class="check-dot"></span> Zero playback stems: 100% authentic live instrumentation</li>
+                <li><span class="check-dot"></span> Voting influence in knockout stages and crowd favorites</li>
+                <li><span class="check-dot"></span> Intimate club sweatbox heats to 5,000+ arena finales</li>
+                <li><span class="check-dot"></span> Exclusive early access to tour dates and limited merchandise</li>
+              </ul>
+              <div class="eco-card-footer-tag">THE VISCERAL CONCERT ROOM</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Act 3: For Telugu Audiences Worldwide (Left Text / Right Card) -->
+        <div class="ecosystem-act-row reveal">
+          <div class="ecosystem-text">
+            <div class="act-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <span>03 / DECCAN HERITAGE</span>
+            </div>
+            <h3>FOR TELUGU AUDIENCES <span class="art-serif-word text-red">WORLDWIDE</span></h3>
+            <p>
+              Hyderabad has always been the fierce, beating heart of Deccan rock culture. For decades, collegiate rock, carnatic progressive fusion, and heavy metal found a sanctuary in this city's auditoriums and open grounds.
+            </p>
+            <p>
+              RITHMOS champions original Telugu songwriting, celebrating artists who fuse regional cultural roots with soaring stadium overdrive. Connecting Telugu music fans across the United States, UK, Australia, and the Gulf back to the live sound of home.
+            </p>
+            <a href="#" class="btn btn-outline" data-open-modal="fanModal">
+              <span>JOIN THE GLOBAL MOVEMENT</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+          <div class="ecosystem-card-col">
+            <div class="editorial-card ecosystem-card">
+              <div class="eco-icon-well">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h4>THE REGIONAL PRIDE</h4>
+              <ul class="eco-benefits-list">
+                <li><span class="check-dot"></span> Celebrating original Telugu rock and multilingual songwriting</li>
+                <li><span class="check-dot"></span> High-definition live broadcast streams for the global diaspora</li>
+                <li><span class="check-dot"></span> Honoring Hyderabad's legendary independent band heritage</li>
+                <li><span class="check-dot"></span> Uniting traditional carnatic cadences with modern arena rock</li>
+              </ul>
+              <div class="eco-card-footer-tag">HYDERABAD TO THE WORLD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 04: THE 4-STAGE CRUCIBLE (THE PROGRESSION ARC)
+         Layout: Alternating Zigzag Progression Milestones
+         ========================================================================== -->
+    <section class="story-chapter-section bg-subtle" id="arc">
+      <div class="container">
+        <div class="section-lead-center reveal">
+          <div class="chapter-pill" style="margin-bottom: 0.75rem;">
+            <span class="chapter-num">CHAPTER 04</span>
+            <span class="chapter-dot"></span>
+            <span>THE CRUCIBLE</span>
+          </div>
+          <h2>THE PATH TO THE <span class="art-serif-word">ARENA.</span></h2>
+          <p>
+            From bedroom demos to screaming arena crowds. Four distinct stages designed to test musical stamina, songwriting originality, and real-time live performance chemistry.
+          </p>
+        </div>
+
+        <div class="progression-zigzag-flow">
+          <!-- Step 1 (Text Left / Visual Right) -->
+          <div class="milestone-zigzag-row reveal">
+            <div class="milestone-text">
+              <div class="milestone-num-badge">STAGE 01 / SCOUTING</div>
+              <h3>RAW DEMO <span class="art-serif-word text-red">SUBMISSIONS</span></h3>
+              <p>
+                No expensive studio production needed. A raw phone recording from your jam room is enough. What matters is the riff, the vocal conviction, and the rhythm pocket.
+              </p>
+              <div class="milestone-meta">
+                <span>Free Entry</span> • <span>National Digital Audition Board</span> • <span>Touring Musician Juries</span>
+              </div>
+            </div>
+            <div class="milestone-visual">
+              <div class="editorial-card milestone-card">
+                <div class="milestone-watermark">01</div>
+                <div class="m-card-header">
+                  <span class="m-stage-tag">STAGE 01</span>
+                  <span class="text-red">OPEN REGISTRATION</span>
+                </div>
+                <h5>AUTHENTICITY OVER POLISH</h5>
+                <p>We evaluate your band's original songwriting voice, groove lock, and dynamic energy. Over 200+ bands screened across India.</p>
+                <div class="m-card-stat">
+                  <span>TOP 32 ADVANCE TO LIVE HEATS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 (Visual Left / Text Right - REVERSE) -->
+          <div class="milestone-zigzag-row m-reverse reveal">
+            <div class="milestone-text">
+              <div class="milestone-num-badge">STAGE 02 / TESTING</div>
+              <h3>THE HYDERABAD CLUB <span class="art-serif-word text-red">HEATS</span></h3>
+              <p>
+                Intimate sweatbox clubs. No backing tracks, no second takes. 32 qualifying bands face off in front of an unsparing crowd of live music obsessives.
+              </p>
+              <div class="milestone-meta">
+                <span>Live Club Stages</span> • <span>Head-to-Head Heats</span> • <span>Crowd & Jury Deciders</span>
+              </div>
+            </div>
+            <div class="milestone-visual">
+              <div class="editorial-card milestone-card">
+                <div class="milestone-watermark">02</div>
+                <div class="m-card-header">
+                  <span class="m-stage-tag">STAGE 02</span>
+                  <span class="text-red">SWEATBOX HEATS</span>
+                </div>
+                <h5>UNDERGROUND ARENAS</h5>
+                <p>Proving whether your songs survive the raw feedback, real-time stage communication, and direct crowd energy of an intimate venue.</p>
+                <div class="m-card-stat">
+                  <span>TOP 8 ADVANCE TO SEMIS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 (Text Left / Visual Right) -->
+          <div class="milestone-zigzag-row reveal">
+            <div class="milestone-text">
+              <div class="milestone-num-badge">STAGE 03 / ELEVATION</div>
+              <h3>REGIONAL ARENA <span class="art-serif-word text-red">SEMIFINALS</span></h3>
+              <p>
+                The production leaps to concert-scale. Full automated lighting rigs, multi-track live audio engineering, multi-camera broadcast capture, and festival crowd sizes.
+              </p>
+              <div class="milestone-meta">
+                <span>Concert Mainstage</span> • <span>Live Broadcast Feed</span> • <span>Touring Sound Engineers</span>
+              </div>
+            </div>
+            <div class="milestone-visual">
+              <div class="editorial-card milestone-card">
+                <div class="milestone-watermark">03</div>
+                <div class="m-card-header">
+                  <span class="m-stage-tag">STAGE 03</span>
+                  <span class="text-red">THE MAIN STAGE</span>
+                </div>
+                <h5>BROADCAST FIDELITY</h5>
+                <p>Every guitar harmonic, bass slap, and vocal belt captured on a dedicated 48-channel live mixing console with pro lighting design.</p>
+                <div class="m-card-stat">
+                  <span>FINAL 4 ADVANCE TO THE FINALE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 (Visual Left / Text Right - REVERSE) -->
+          <div class="milestone-zigzag-row m-reverse reveal">
+            <div class="milestone-text">
+              <div class="milestone-num-badge">STAGE 04 / DESTINY</div>
+              <h3>THE GRAND FINALE <span class="art-serif-word text-red">ARENA</span></h3>
+              <p>
+                5,000+ roaring fans in Hyderabad. The four greatest live bands of the season go head-to-head. One band is crowned the RITHMOS Champion.
+              </p>
+              <div class="milestone-meta">
+                <span>5,000+ Crowd</span> • <span>National Tour Contract</span> • <span>Studio EP Deal</span>
+              </div>
+            </div>
+            <div class="milestone-visual">
+              <div class="editorial-card milestone-card highlight-card">
+                <div class="milestone-watermark">04</div>
+                <div class="m-card-header">
+                  <span class="m-stage-tag">STAGE 04</span>
+                  <span class="text-red">THE CHAMPION</span>
+                </div>
+                <h5>IMMORTAL INDIE LEGACY</h5>
+                <p>The winning band receives a multi-city national headline tour contract, fully funded studio master EP production, and booking agency representation.</p>
+                <div class="m-card-stat text-red">
+                  <span>★ 01 RITHMOS CHAMPION CROWNED</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 05: CULTURAL ALLIANCE (BRANDS & SPONSORS)
+         Layout: Text Left, Interactive Visual Right
+         ========================================================================== -->
+    <section class="story-chapter-section bg-white" id="partners">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Text Left -->
+          <div class="story-text-col reveal">
+            <div class="chapter-pill">
+              <span class="chapter-num">CHAPTER 05</span>
+              <span class="chapter-dot"></span>
+              <span>CULTURAL PATRONAGE</span>
+            </div>
+            <h2 class="story-title">ALIGN WITH GENUINE YOUTH <span class="art-serif-word text-red">CULTURE.</span></h2>
+            <p class="story-lead-italic">
+              “Not sterile logo wallpaper. An authentic alliance with India's most passionate musicians and concert audiences.”
+            </p>
+            <p class="story-body-text">
+              Young audiences in India are cynical of generic banner advertising and paid influencer placements. What resonates is genuine cultural patronage — brands that build stages, invest in grassroots sound, and empower real artistry.
+            </p>
+            <p class="story-body-text">
+              Partnering with RITHMOS provides category-exclusive stage naming, direct on-ground engagement across our tournament heats, and broadcast integration seen by millions of live music lovers.
+            </p>
+            <div class="story-action-row">
+              <button class="btn btn-red" data-open-modal="brandModal">
+                <span>REQUEST PARTNER DOSSIER</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Visual Right: Cultural Patronage Commitments -->
+          <div class="story-visual-col reveal">
+            <div class="editorial-card visual-card-patronage">
+              <div class="milestone-watermark">05</div>
+              <div class="patronage-header">
+                <div class="patronage-title-row">
+                  <span class="patronage-badge">PATRONAGE MANIFESTO</span>
+                  <span class="patronage-year">SEASON 2026</span>
+                </div>
+                <div class="patronage-sub">WHERE CULTURAL PATRONAGE MEETS REAL ARTISTRY</div>
+              </div>
+
+              <div class="patronage-commitments-list">
+                <div class="commitment-card">
+                  <div class="commitment-num">01</div>
+                  <div class="commitment-info">
+                    <strong>Grassroots Touring & Logistics Grants</strong>
+                    <span>100% of brand alliance funds directly subsidize travel, backline transport, and rehearsal stipends for competing bands.</span>
+                  </div>
+                </div>
+
+                <div class="commitment-card">
+                  <div class="commitment-num">02</div>
+                  <div class="commitment-info">
+                    <strong>Studio Master Multi-Track Archiving</strong>
+                    <span>Every band on the RITHMOS stage receives professional 48-track concert stems mixed by veteran sound engineers.</span>
+                  </div>
+                </div>
+
+                <div class="commitment-card">
+                  <div class="commitment-num">03</div>
+                  <div class="commitment-info">
+                    <strong>Subsidized Student Stage Passes</strong>
+                    <span>Underwritten ticketing keeps entry accessible to college students, guaranteeing genuine, high-voltage crowd energy.</span>
+                  </div>
+                </div>
+
+                <div class="commitment-card">
+                  <div class="commitment-num">04</div>
+                  <div class="commitment-info">
+                    <strong>Acoustic Infrastructure, Not Wallpaper</strong>
+                    <span>Zero generic banner clutter. Partners invest directly in physical amplifiers, drum stages, and broadcast audio suites.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="patronage-footer">
+                <span class="patronage-footer-dot"></span>
+                <span>AUDITED CULTURAL INVESTMENT • HYDERABAD TO PAN-INDIA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CHAPTER 06: THE FINAL CALL
+         ========================================================================== -->
+    <section class="final-cta-section" id="register">
+      <div class="container cta-box reveal">
+        <div class="chapter-pill" style="margin-bottom: 1.25rem;">
+          <span class="chapter-num">CHAPTER 06</span>
+          <span class="chapter-dot"></span>
+          <span>THE STAGE IS SET</span>
+        </div>
+        <h2>EVERY BAND HAS A STORY.<br>EVERY STORY NEEDS A <span class="art-serif-word text-red">STAGE.</span></h2>
+        <p>
+          Submissions for the inaugural Hyderabad season are open. Band registrations are completely free. Grab your audience pass before the arena heats reach capacity.
+        </p>
+
+        <div class="cta-btn-row">
+          <button class="btn btn-red" data-open-modal="bandModal">
+            <span>REGISTER YOUR BAND</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </button>
+          <button class="btn btn-outline" data-open-modal="fanModal">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="12" x="2" y="6" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+            <span>GET AUDIENCE PASSES</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       CLEAN FOOTER
+       Official Logo + Pure Typography
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <img src="rithmos-logo.png" alt="RITHMOS Logo" class="footer-logo-img">
+
+        <div class="footer-links-group">
+          <a href="#" class="footer-link-item" data-open-modal="bandModal">Band Entry</a>
+          <a href="#" class="footer-link-item" data-open-modal="fanModal">Audience Pass</a>
+          <a href="#" class="footer-link-item" data-open-modal="brandModal">Partner Deck</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 RITHMOS Live Music Properties. All rights reserved.</span>
+        <span>BORN IN HYDERABAD • PAN-INDIA LIVE MUSIC</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: BAND REGISTRATION
+       ========================================================================== -->
+  <div class="modal-overlay" id="bandModal" role="dialog" aria-modal="true" aria-labelledby="bandModalTitle">
+    <div class="modal-panel">
+      <button class="modal-close-button" aria-label="Close modal">&times;</button>
+      <span class="tag-label" style="color: var(--accent-red); margin-bottom: 0.5rem;">BAND REGISTRATION</span>
+      <h3 id="bandModalTitle" style="font-size: 1.6rem; margin-bottom: 0.5rem;">STEP ONTO THE STAGE</h3>
+      <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.75rem;">
+        Submissions are reviewed directly by touring musicians. A jam room phone recording is welcome.
+      </p>
+
+      <form id="bandRegistrationForm">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="bandName">Band Name *</label>
+            <input type="text" id="bandName" class="form-input" placeholder="e.g. Hyderabad Overdrive" required>
+          </div>
+          <div class="form-group">
+            <label for="bandGenre">Primary Genre *</label>
+            <select id="bandGenre" class="form-select" required>
+              <option value="">Select genre</option>
+              <option value="alternative-rock">Alternative / Grunge Rock</option>
+              <option value="telugu-fusion">Telugu / Regional Folk Rock Fusion</option>
+              <option value="heavy-metal">Heavy Metal / Progressive</option>
+              <option value="indie-rock">Indie Pop / Post-Punk</option>
+              <option value="hard-rock">Hard Rock & Blues</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="contactName">Representative Name *</label>
+            <input type="text" id="contactName" class="form-input" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Phone / WhatsApp *</label>
+            <input type="tel" id="contactPhone" class="form-input" placeholder="+91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="contactEmail">Official Email *</label>
+          <input type="email" id="contactEmail" class="form-input" placeholder="band@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="demoUrl">Jam Room / Demo Video or Audio Link *</label>
+          <input type="url" id="demoUrl" class="form-input" placeholder="YouTube, Drive, or SoundCloud URL" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bandBio">Lineup & Brief Bio</label>
+          <textarea id="bandBio" class="form-textarea" rows="3" placeholder="Members, instruments, how long you've been jamming..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-red" style="width: 100%;">
+          SUBMIT BAND APPLICATION
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: FAN PASS & UPDATES
+       ========================================================================== -->
+  <div class="modal-overlay" id="fanModal" role="dialog" aria-modal="true" aria-labelledby="fanModalTitle">
+    <div class="modal-panel">
+      <button class="modal-close-button" aria-label="Close modal">&times;</button>
+      <span class="tag-label" style="margin-bottom: 0.5rem;">LIVE AUDIENCE PASS</span>
+      <h3 id="fanModalTitle" style="font-size: 1.6rem; margin-bottom: 0.5rem;">GET STAGE PASS UPDATES</h3>
+      <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.75rem;">
+        Get early access to Hyderabad live heats, venue announcements, and grand arena tickets.
+      </p>
+
+      <form id="fanUpdatesForm">
+        <div class="form-group">
+          <label for="fanName">Your Name *</label>
+          <input type="text" id="fanName" class="form-input" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+          <label for="fanEmail">Email Address *</label>
+          <input type="email" id="fanEmail" class="form-input" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="fanCity">Your City *</label>
+          <input type="text" id="fanCity" class="form-input" placeholder="Hyderabad (or worldwide)" required>
+        </div>
+        <button type="submit" class="btn btn-black" style="width: 100%;">
+          JOIN VIP FAN LIST
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 3: BRAND ALLIANCE
+       ========================================================================== -->
+  <div class="modal-overlay" id="brandModal" role="dialog" aria-modal="true" aria-labelledby="brandModalTitle">
+    <div class="modal-panel">
+      <button class="modal-close-button" aria-label="Close modal">&times;</button>
+      <span class="tag-label" style="color: var(--accent-red); margin-bottom: 0.5rem;">COMMERCIAL ALLIANCES</span>
+      <h3 id="brandModalTitle" style="font-size: 1.6rem; margin-bottom: 0.5rem;">PARTNER WITH RITHMOS</h3>
+      <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.75rem;">
+        Connect your brand with authentic live youth music and rock culture.
+      </p>
+
+      <form id="brandPartnerForm">
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="brandCompany">Brand / Company *</label>
+            <input type="text" id="brandCompany" class="form-input" placeholder="Brand Name" required>
+          </div>
+          <div class="form-group">
+            <label for="brandContactName">Contact Name *</label>
+            <input type="text" id="brandContactName" class="form-input" placeholder="Your Name" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="brandEmail">Corporate Email *</label>
+          <input type="email" id="brandEmail" class="form-input" placeholder="partner@brand.com" required>
+        </div>
+        <div class="form-group">
+          <label for="brandCategory">Partnership Focus</label>
+          <select id="brandCategory" class="form-select">
+            <option value="stage-title">Title / Mainstage Partner</option>
+            <option value="sound-gear">Instrument & Audio Gear Partner</option>
+            <option value="lifestyle-beverage">Lifestyle / Beverage Partner</option>
+            <option value="streaming">Digital Streaming Broadcast Partner</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-red" style="width: 100%;">
+          REQUEST PARTNERSHIP KIT
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
